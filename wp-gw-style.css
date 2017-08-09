@@ -1,0 +1,19 @@
+.gw2wvw-info-table .wvw-percent {
+	display: block;
+	padding: 2px 7px;
+	border-radius:5px;
+	color:#fff;
+	box-sizing: border-box;
+}
+
+.gw2wvw-info-table .wvw-percent-red {
+	background-color: #dd514c;
+}
+
+.gw2wvw-info-table .wvw-percent-green {
+	background-color: #5eb95e;
+}
+
+.gw2wvw-info-table .wvw-percent-blue {
+	background-color: #0e90d2;
+}
