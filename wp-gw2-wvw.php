@@ -24,7 +24,7 @@ function mn_enqueue(){
 function gw2wvw_shortcode($attr){
 	extract(shortcode_atts(array(
 		'world' => '1080',
-	), $atts));
+	), $attr));
 
 	$gw2 = new Gw2wvw(array('current_world' => $world));
 	$worlds = $gw2->worlds;
@@ -80,7 +80,7 @@ EOT;
 	<table class="gw2wvw-info-table">
 		<thead>
 			<tr>
-				<th>{$txt['worlds']}</th>
+				<th>{$txt['worlds']} - {$gw2->current_world}</th>
 				<th>{$txt['vscore']}</th>
 				<th>{$txt['cscore']}</th>
 				<th>{$txt['kdr']}</th>

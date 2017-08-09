@@ -7,7 +7,7 @@ class Gw2wvw {
 	public $home_color;
 	public $linked;
 
-	function __construct($options = array()){
+	function __construct($option = array()){
 		if(empty($option['current_world'])){
 			$option['current_world'] = 1018;
 		}
