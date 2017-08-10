@@ -5,6 +5,8 @@ Support new skirmish points system.
 
 Core code derived from my crude code here: https://github.com/IronGhost63/gw2-wvw-tools
 
+![Screenshot](http://i.imgur.com/dVLKFpx.png)
+
 ## Installation
 Activate plugin then use shortcode [gw2wvw world=]
 
