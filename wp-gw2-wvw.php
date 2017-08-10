@@ -47,8 +47,8 @@ function gw2wvw_shortcode($attr){
 	foreach(array('red', 'green', 'blue') as $single){
 		$server_name = '<span class="wvw-server-home">' . $worlds[$gw2->match_info[$single]['host']] . '</span>';
 
-		if($gw2->home_server === $gw2->match_info[$single]['host']){
-			$server_name .= ' <i class="wvw-home-icon></i>';
+		if($gw2->home_world === $gw2->match_info[$single]['host']){
+			$server_name .= ' <i class="wvw-home-icon"></i>';
 		}
 
 		if(!empty($gw2->linked[$single])){
@@ -64,7 +64,7 @@ function gw2wvw_shortcode($attr){
 				<td>{$server_name}</td>
 				<td><p class="wvw-percent wvw-percent-{$single}" style="width: {$vscore_width}%;">{$gw2->match_info[$single]['v_scores']}</p></td>
 				<td><p class="wvw-percent wvw-percent-{$single}" style="width: {$cscore_width}%;">{$gw2->match_info[$single]['current_skirmish_scores']}</p></td>
-				<td><span class="wvw-kdr">{$kdr}</span></td>
+				<td class="column-center"><span class="wvw-kdr">{$kdr}</span></td>
 			</tr>
 EOT;
 	}
@@ -73,23 +73,25 @@ EOT;
 		'worlds' => __("Worlds"),
 		'vscore' => __("Victory Points"),
 		'cscore' => __("Current Skirmish"),
-		'kdr' => __("KDR")
+		'kdr' => __("KDR"),
+		'notice' => __("Update every 5 minutes")
 	);
 
 	$html = <<<EOT
 	<table class="gw2wvw-info-table">
 		<thead>
 			<tr>
-				<th>{$txt['worlds']}</th>
-				<th>{$txt['vscore']}</th>
-				<th>{$txt['cscore']}</th>
-				<th>{$txt['kdr']}</th>
+				<th width="50%">{$txt['worlds']}</th>
+				<th width="20%" class="column-center">{$txt['vscore']}</th>
+				<th width="20%" class="column-center">{$txt['cscore']}</th>
+				<th width="10%" class="column-center">{$txt['kdr']}</th>
 			</tr>
 		</thead>
 		<tbody>
 			{$rows}
 		</tbody>
 	</table>
+	<p class="gw2wvw-info-table-notice">{$txt['notice']}</p>
 EOT;
 
 	return $html;

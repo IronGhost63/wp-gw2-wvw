@@ -105,10 +105,13 @@ class Gw2wvw {
 		}
 
 		if(in_array($world_id, $score->all_worlds->red)){
+			$this->home_world = $score->worlds->red;
 			$this->home_color = "red";
 		}elseif(in_array($world_id, $score->all_worlds->green)){
+			$this->home_world = $score->worlds->green;
 			$this->home_color = "green";
 		}elseif(in_array($world_id, $score->all_worlds->blue)){
+			$this->home_world = $score->worlds->blue;
 			$this->home_color = "blue";
 		}
 
