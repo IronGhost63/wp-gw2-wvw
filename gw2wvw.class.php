@@ -52,7 +52,7 @@ class Gw2wvw {
 
 		if(false === ( $score = get_transient( 'gw2_wvw_' . $this->current_world ) ) ){
 			$score = $this->get_gw_api( "https://api.guildwars2.com/v2/wvw/matches?world=" . $world_id );
-			set_transient( 'gw2_wvw_' . $this->current_world, $score, 600);
+			set_transient( 'gw2_wvw_' . $this->current_world, $score, 300);
 		}
 
 		$score = $this->get_gw_api( "https://api.guildwars2.com/v2/wvw/matches?world=" . $world_id );
