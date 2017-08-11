@@ -13,10 +13,10 @@ Text Domain: gw2wvwinfo
 
 include("gw2wvw.class.php");
 
-add_action("wp_enqueue_scripts", "mn_enqueue");
+add_action("wp_enqueue_scripts", "gw2wvw_enqueue");
 add_shortcode("gw2wvw", "gw2wvw_shortcode");
 
-function mn_enqueue(){
+function gw2wvw_enqueue(){
 	wp_register_style( "gw2wvwinfo", plugins_url("wp-gw-style.css", __FILE__));
 	wp_enqueue_style( "gw2wvwinfo" );
 }
